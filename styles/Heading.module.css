@@ -1,0 +1,27 @@
+.basic {
+  font-family: 'Inter', sans-serif;
+  color: #03fcba;
+  font-weight: 900;
+  width: fit-content;
+}
+
+.frontPage {
+  composes: basic;
+  font-size: 4rem;
+}
+
+.quizScreen {
+  composes: basic;
+  font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .frontPage {
+    font-size: 3.3rem;
+    text-align: center;
+  }
+  .quizScreen {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+}

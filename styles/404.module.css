@@ -1,0 +1,43 @@
+.container {
+  display: grid;
+  font-family: 'Inter', sans-serif;
+  color: #d4e4bc;
+  margin: 0 2rem;
+  align-items: flex-end;
+  text-align: center;
+}
+
+.container h1 {
+  color: #ed254e;
+}
+
+.errorContainer {
+  height: 100vh;
+  composes: container;
+  padding-bottom: 1rem;
+}
+
+.errorContainer h1 {
+  font-size: 2rem;
+}
+
+.container a {
+  color: #f4e04d;
+  text-decoration: none;
+}
+
+.errorContainer > div > div {
+  font-size: 1rem;
+  margin: 0.5rem 1rem 0rem 1rem;
+}
+
+.notStartedContainer {
+  composes: container;
+  height: 50vh;
+  align-content: flex-end;
+  row-gap: 0.5rem;
+}
+
+.notStartedContainer h1 {
+  font-size: 1.9rem;
+}

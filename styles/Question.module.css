@@ -1,0 +1,20 @@
+.questionText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #f4e04d;
+  font-size: 1.25rem;
+  margin-bottom: 0.3rem;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0.5rem;
+  column-gap: 1rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .questionText {
+    font-size: 1rem;
+  }
+}

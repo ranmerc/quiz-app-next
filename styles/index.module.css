@@ -1,0 +1,56 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 3rem;
+  margin-left: 6rem;
+}
+
+.label {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #c2847a;
+  font-size: 1.5rem;
+  width: fit-content;
+}
+
+.input {
+  font-family: 'Inter', sans-serif;
+  width: fit-content;
+  font-size: 1rem;
+  background-color: #e6e8e6;
+}
+
+.formElement {
+  display: grid;
+  grid-template-columns: 40ch auto;
+}
+
+@media only screen and (max-width: 720px) {
+  .container {
+    height: auto;
+    margin: 4rem;
+    row-gap: 4rem;
+  }
+
+  .formElement {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+
+  .input {
+    justify-self: center;
+    width: 15ch;
+    margin: 0 auto;
+    font-size: 0.9rem;
+  }
+
+  .label {
+    font-size: 1.3rem;
+    text-align: center;
+    width: 100%;
+  }
+}

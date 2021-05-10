@@ -1,0 +1,18 @@
+.basic {
+  font-family: 'Inter', sans-serif;
+  padding: 0.5em 0.9em;
+  font-size: 1rem;
+  color: #e6e8e6;
+  background-color: #da4167;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  width: fit-content;
+  height: fit-content;
+}
+
+.basic:hover,
+.basic:focus {
+  color: black;
+  background-color: white;
+}

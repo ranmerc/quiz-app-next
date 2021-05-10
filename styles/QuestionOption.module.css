@@ -1,0 +1,30 @@
+.basic {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #f4e04d;
+  font-size: 1.2rem;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.basic:hover > input + span {
+  cursor: pointer;
+  background-color: #d4e4bc;
+  color: black;
+}
+
+.basic > input {
+  display: none;
+}
+
+.basic > input:checked + span {
+  background-color: #d4e4bc;
+  color: black;
+  outline: 2px solid #d4e4bc;
+}
+
+@media only screen and (max-width: 720px) {
+  .basic {
+    font-size: 0.92rem;
+  }
+}

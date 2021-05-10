@@ -1,0 +1,19 @@
+.form {
+  display: grid;
+  row-gap: 1rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .form {
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+
+  .form > input[type='submit'] {
+    justify-self: center;
+  }
+
+  .submit {
+    color: red;
+  }
+}

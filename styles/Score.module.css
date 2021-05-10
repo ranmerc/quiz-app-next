@@ -1,0 +1,32 @@
+.container {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fefae0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0.5rem;
+  margin-right: 2rem;
+}
+
+.timeTaken {
+  font-size: 1.4rem;
+}
+
+.container > button {
+  justify-self: end;
+}
+
+@media only screen and (max-width: 720px) {
+  .container {
+    margin-right: 0rem;
+    font-size: 1.4rem;
+    row-gap: 0.2rem;
+  }
+  .container > button {
+    font-size: 0.75rem;
+  }
+  .timeTaken {
+    font-size: 1rem;
+  }
+}
