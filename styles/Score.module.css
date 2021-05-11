@@ -11,6 +11,7 @@
 
 .timeTaken {
   font-size: 1.4rem;
+  display: flex;
 }
 
 .container > button {
@@ -28,5 +29,9 @@
   }
   .timeTaken {
     font-size: 1rem;
+    flex-direction: column;
+  }
+  .timeTaken > div {
+    font-size: 0.8rem;
   }
 }

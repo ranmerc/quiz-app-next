@@ -11,7 +11,9 @@ const Score = forwardRef((props, ref) => {
     <div className={style.container} ref={ref}>
       <div className={style.score}>Score - {props.score}</div>
       <Button click={redirect}>Take Another Quiz</Button>
-      <div className={style.timeTaken}>Time Taken - {props.time}</div>
+      <div className={style.timeTaken}>
+        Time Taken - <div>{props.time}</div>
+      </div>
     </div>
   );
 });

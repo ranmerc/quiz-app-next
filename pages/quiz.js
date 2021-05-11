@@ -85,8 +85,8 @@ export default function Quiz({ quizData, quizParams }) {
       setScore(score);
       setTime(() => {
         const now = new Date();
-        const minutes = Math.round((now - time) / 60000);
-        const seconds = Math.round((now - time) / 1000 - 60 * minutes);
+        const minutes = Math.floor((now - time) / 60000);
+        const seconds = Math.floor((now - time) / 1000 - 60 * minutes);
         return `${minutes ? `${minutes} Minutes` : ''} ${
           seconds ? `${seconds} Seconds` : ''
         }`;
