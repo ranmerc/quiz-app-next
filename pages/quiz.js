@@ -5,7 +5,6 @@ import style from '../styles/quiz.module.css';
 import { useEffect, useCallback, useState } from 'react';
 import Question from '../components/Question';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import Score from '../components/Score';
 
 export default function Quiz({ quizData, quizParams }) {
