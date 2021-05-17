@@ -5,7 +5,7 @@ import { forwardRef } from 'react';
 
 const Score = forwardRef((props, ref) => {
   const redirect = () => {
-    router.push('/');
+    router.back();
   };
   return (
     <div className={style.container} ref={ref}>
