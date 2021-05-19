@@ -21,7 +21,8 @@ export default function Home() {
       .forEach((c) => {
         document.cookie = `${c}=;expires=Thu, 01 Jan 1970 00:00:01 GMT;`;
       });
-  });
+    router.prefetch('/quiz');
+  }, []);
 
   const formSubmit = (e) => {
     e.preventDefault();
@@ -29,7 +30,7 @@ export default function Home() {
     document.cookie = `category=${JSON.stringify(category)}`;
     document.cookie = `difficulty=${JSON.stringify(difficulty)}`;
     document.cookie = `type=${JSON.stringify(type)}`;
-    router.push('/quiz');
+    router.replace('/quiz');
   };
 
   return (
