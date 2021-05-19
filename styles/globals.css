@@ -9,3 +9,28 @@
 body {
   background-color: #253031;
 }
+
+.loading-bar {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: red;
+  width: 100%;
+  height: 8px;
+  will-change: transform;
+  transform-origin: left;
+  transition: transform 500ms;
+  animation-name: loading;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loading {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(0.9);
+  }
+}

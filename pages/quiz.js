@@ -46,15 +46,11 @@ export default function Quiz({ quizData, quizParams }) {
       nameSet.forEach((name) => {
         const options = Array.from(document.getElementsByName(name));
         options.forEach((o) => {
-          console.log(
-            quizData[i].correct_answer,
-            o.nextElementSibling.innerText.split(/[ABCD]\.\s/)[1]
-          );
+          o.setAttribute('disabled', 'disabled');
           if (
             quizData[i].correct_answer ===
             o.nextElementSibling.innerText.split(/[ABCD]\.\s/)[1]
           ) {
-            console.log('yes', i);
             o.nextElementSibling.style.backgroundColor = '#0CCA4A';
             o.nextElementSibling.style.outline = '2px solid #0CCA4A';
             o.nextElementSibling.style.color = 'black';
@@ -64,7 +60,6 @@ export default function Quiz({ quizData, quizParams }) {
               quizData[i].correct_answer !==
               o.nextElementSibling.innerText.split(/[ABCD]\.\s/)[1]
             ) {
-              console.log('no', i);
               o.nextElementSibling.style.backgroundColor = '#ED254E';
               o.nextElementSibling.style.outline = '2px solid #ED254E';
               o.nextElementSibling.style.color = 'black';
