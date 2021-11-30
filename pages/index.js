@@ -1,56 +1,58 @@
+import router from 'next/router';
+import Form from '../components/Form';
+import Button from '../components/Button';
 import Layout from '../components/Layout';
 import Heading from '../components/Heading';
 import { useEffect, useState } from 'react';
-import Form from '../components/Form';
 import style from '../styles/index.module.css';
-import Button from '../components/Button';
-import router from 'next/router';
 
 export default function Home() {
-  const [noOfQuestions, setNoOfQuestions] = useState(10);
-  const [category, setCategory] = useState(['any', 'Random Topic']);
-  const [difficulty, setDifficulty] = useState(['any', 'Random']);
-  const [type, setType] = useState(['any', 'Random']);
-
-  useEffect(() => {
-    document.cookie
-      .split(';')
-      .map((c) => {
-        return c.split('=')[0];
-      })
-      .forEach((c) => {
-        document.cookie = `${c}=;expires=Thu, 01 Jan 1970 00:00:01 GMT;`;
-      });
-    router.prefetch('/quiz');
-  }, []);
+  const [amount, setAmount] = useState(10);
+  const [category, setCategory] = useState('any');
+  const [difficulty, setDifficulty] = useState('any');
+  const [type, setType] = useState('any');
+  const [queryString, setQueryString] = useState('');
 
   const formSubmit = (e) => {
     e.preventDefault();
-    document.cookie = `noOfQuestions=${JSON.stringify(noOfQuestions)}`;
-    document.cookie = `category=${JSON.stringify(category)}`;
-    document.cookie = `difficulty=${JSON.stringify(difficulty)}`;
-    document.cookie = `type=${JSON.stringify(type)}`;
-    router.replace('/quiz');
+    router.replace(`/quiz?${queryString}`);
   };
+
+  useEffect(() => {
+    setQueryString((prevQueryString) => {
+      const searchParam = new URLSearchParams();
+      searchParam.append('amount', amount);
+      if (category !== 'any') {
+        searchParam.append('category', category);
+      }
+      if (difficulty !== 'any') {
+        searchParam.append('difficulty', difficulty);
+      }
+      if (type !== 'any') {
+        searchParam.append('type', type);
+      }
+      return searchParam.toString();
+    });
+  }, [amount, category, difficulty, type]);
 
   return (
     <Layout title="Quiz App">
-      <div className={style.container}>
+      <main className={style.container}>
         <Heading place="frontPage">Quiz App</Heading>
         <Form submit={formSubmit}>
           <div className={style.formElement}>
-            <label htmlFor="noOfQuestions" className={style.label}>
+            <label htmlFor="amount" className={style.label}>
               Number Of Questions
             </label>
             <input
               type="number"
-              id="noOfQuestions"
+              id="amount"
               min="1"
               max="50"
-              value={noOfQuestions}
+              value={amount}
               required
               onInput={(e) => {
-                setNoOfQuestions(e.target.value);
+                setAmount(e.target.value);
               }}
               className={style.input}
             />
@@ -62,11 +64,9 @@ export default function Home() {
             <select
               id="category"
               className={style.input}
+              value={category}
               onChange={(e) => {
-                setCategory([
-                  e.target.value,
-                  e.target[e.target.selectedIndex].text,
-                ]);
+                setCategory(e.target.value);
               }}
             >
               <option value="any">Any Category</option>
@@ -107,11 +107,9 @@ export default function Home() {
             <select
               id="difficulty"
               className={style.input}
+              value={difficulty}
               onChange={(e) => {
-                setDifficulty([
-                  e.target.value,
-                  e.target[e.target.selectedIndex].text,
-                ]);
+                setDifficulty(e.target.value);
               }}
             >
               <option value="any">Any Difficulty</option>
@@ -127,11 +125,9 @@ export default function Home() {
             <select
               id="type"
               className={style.input}
+              value={type}
               onChange={(e) => {
-                setType([
-                  e.target.value,
-                  e.target[e.target.selectedIndex].text,
-                ]);
+                setType(e.target.value);
               }}
             >
               <option value="any">Any Type</option>
@@ -141,7 +137,7 @@ export default function Home() {
           </div>
           <Button type="submit">Start Quiz</Button>
         </Form>
-      </div>
+      </main>
     </Layout>
   );
 }
