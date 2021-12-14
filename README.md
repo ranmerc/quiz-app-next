@@ -11,3 +11,13 @@ A NextJS Quiz App based on project idea from [app-ideas](https://github.com/flor
 - Fonts downloaded from [Google Fonts](fonts.google.com).
 
 - Document.cookie on [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie).
+
+- How to label a loading animation for WAI-ARIA? on [StackOverflow](https://stackoverflow.com/questions/38704467/how-to-label-a-loading-animation-for-wai-aria)
+
+- Checking Value of Radio Button Group via JavaScript? on [StackOverflow](https://stackoverflow.com/questions/9561625/checking-value-of-radio-button-group-via-javascript)
+
+- FormData on [MDN](https://developer.mozilla.org/en-US/docs/Web/API/FormData/)
+
+- scroll-margin on [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin)
+
+- [Inclusively Hiding & Styling Checkboxes and Radio Buttons](https://www.sarasoueidan.com/blog/inclusively-hiding-and-styling-checkboxes-and-radio-buttons/)
