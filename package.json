@@ -1,7 +1,5 @@
 {
   "name": "quiz-app",
-  "version": "0.1.0",
-  "author": "deadmercury",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,7 +10,6 @@
     "html-entities": "^2.3.2",
     "next": "^12.0.4",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-toastify": "^7.0.4"
+    "react-dom": "^17.0.2"
   }
 }

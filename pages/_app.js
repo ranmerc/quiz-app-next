@@ -1,5 +1,4 @@
 import '../styles/globals.css';
-import '../styles/ReactToastify.css';
 import LoadingBar from '../components/LoadingBar';
 
 function MyApp({ Component, pageProps }) {
