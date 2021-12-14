@@ -12,7 +12,7 @@ import {
   quizCategory,
   quizType,
   quizDifficulty,
-} from '../utils/quizparamResolver';
+} from '../utils/param_resolver';
 import { decode } from 'html-entities';
 
 export default function Quiz() {
