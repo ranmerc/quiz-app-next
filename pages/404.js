@@ -1,17 +1,10 @@
-import { useEffect, useState } from 'react';
-import style from '../styles/404.module.css';
 import Link from 'next/link';
+import style from '../styles/404.module.css';
 
-export default function Custom404({ cookies }) {
-  const [cookieExists, setCookieExists] = useState(false);
-
-  useEffect(() => {
-    if (document.cookie) setCookieExists(!cookieExists);
-  }, []);
-
+export default function Custom404({ APIError }) {
   return (
     <>
-      {cookieExists ? (
+      {APIError ? (
         <div className={style.errorContainer}>
           <div>
             <h1>That Didn’t Work</h1>
@@ -24,7 +17,7 @@ export default function Custom404({ cookies }) {
           </div>
           <div>
             If you continue seeing this maybe the{' '}
-            <Link href="https://opentdb.com/">API</Link> is down.
+            <a href="https://opentdb.com/">API</a> is down.
           </div>
         </div>
       ) : (
