@@ -1,4 +1,4 @@
-import router from 'next/router';
+import { useRouter } from 'next/router';
 import Form from '../components/Form';
 import Button from '../components/Button';
 import Layout from '../components/Layout';
@@ -12,6 +12,7 @@ export default function Home() {
   const [difficulty, setDifficulty] = useState('any');
   const [type, setType] = useState('any');
   const [queryString, setQueryString] = useState('');
+  const router = useRouter();
 
   const formSubmit = (e) => {
     e.preventDefault();

@@ -3,7 +3,7 @@ import QuestionOption from './QuestionOption';
 import { decode } from 'html-entities';
 import { useState } from 'react';
 
-export default function Question({ children, answers, onChange }) {
+export default function Question({ children, answers }) {
   let [jumbledAnswers, setJumbledAnswers] = useState(() => {
     const length = answers.length;
     return answers
@@ -30,9 +30,6 @@ export default function Question({ children, answers, onChange }) {
                 children.substring(0, 4) +
                 children.substring(children.length - 10)
               }
-              onCheck={(e) => {
-                onChange(e.target.value);
-              }}
             >
               {alphabetMap[i]}. {a}
             </QuestionOption>

@@ -5,22 +5,38 @@
   font-size: 1.2rem;
   width: fit-content;
   cursor: pointer;
-}
-
-.basic:hover > input + span {
-  cursor: pointer;
-  background-color: #d4e4bc;
-  color: black;
+  position: relative;
 }
 
 .basic > input {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.basic > input:focus + span {
+  outline-offset: 2px;
+  outline: 2px solid #d4e4bc;
+}
+
+.basic > input:enabled:hover + span {
+  outline-offset: 2px;
+  outline: 2px solid #d4e4bc;
+}
+
+.basic > input:disabled:hover {
+  cursor: not-allowed;
 }
 
 .basic > input:checked + span {
   background-color: #d4e4bc;
   color: black;
-  outline: 2px solid #d4e4bc;
 }
 
 @media only screen and (max-width: 720px) {
