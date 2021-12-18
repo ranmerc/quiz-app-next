@@ -2,8 +2,8 @@
   font-family: 'Inter', sans-serif;
   padding: 0.5em 0.9em;
   font-size: 1rem;
-  color: #e6e8e6;
-  background-color: #da4167;
+  color: var(--teal1);
+  background-color: var(--teal9);
   border: none;
   cursor: pointer;
   font-weight: 700;
@@ -13,6 +13,13 @@
 
 .basic:hover,
 .basic:focus {
-  color: black;
-  background-color: white;
+  color: var(--teal1);
+  background-color: hsl(166 73% 93.1%);
+}
+
+@media only screen and (max-width: 720px) {
+  .basic {
+    font-size: 1.2rem;
+    padding: 0.3em 0.6em;
+  }
 }

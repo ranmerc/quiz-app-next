@@ -1,6 +1,6 @@
 .basic {
   font-family: 'Inter', sans-serif;
-  color: #03fcba;
+  color: var(--teal9);
   font-weight: 900;
   /* width: fit-content; */
 }

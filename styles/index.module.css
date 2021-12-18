@@ -8,10 +8,9 @@
 }
 
 .label {
-  color: white;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  color: #c2847a;
+  color: var(--sage12);
   font-size: 1.5rem;
   width: fit-content;
 }
@@ -20,7 +19,10 @@
   font-family: 'Inter', sans-serif;
   width: fit-content;
   font-size: 1rem;
-  background-color: #e6e8e6;
+  color: var(--sage12);
+  background-color: var(--teal3);
+  border: none;
+  padding: 0.3em 0.7em;
 }
 
 .formElement {
@@ -45,7 +47,8 @@
     justify-self: center;
     width: 15ch;
     margin: 0 auto;
-    font-size: 0.9rem;
+    font-size: 1.2em;
+    text-align: center;
   }
 
   .label {

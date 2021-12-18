@@ -1,14 +1,14 @@
 .container {
   display: grid;
   font-family: 'Inter', sans-serif;
-  color: #d4e4bc;
+  color: var(--sage12);
   margin: 0 2rem;
   align-items: flex-end;
   text-align: center;
 }
 
 .container h1 {
-  color: #ed254e;
+  color: var(--teal11);
 }
 
 .errorContainer {
@@ -22,7 +22,7 @@
 }
 
 .container a {
-  color: #f4e04d;
+  color: var(--teal9);
   text-decoration: none;
 }
 

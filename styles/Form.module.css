@@ -12,8 +12,4 @@
   .form > input[type='submit'] {
     justify-self: center;
   }
-
-  .submit {
-    color: red;
-  }
 }

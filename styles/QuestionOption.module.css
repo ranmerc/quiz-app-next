@@ -1,7 +1,7 @@
 .basic {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  color: #f4e04d;
+  color: var(--teal12);
   font-size: 1.2rem;
   width: fit-content;
   cursor: pointer;
@@ -20,14 +20,10 @@
   cursor: pointer;
 }
 
+.basic > input:enabled:hover + span,
 .basic > input:focus + span {
   outline-offset: 2px;
-  outline: 2px solid #d4e4bc;
-}
-
-.basic > input:enabled:hover + span {
-  outline-offset: 2px;
-  outline: 2px solid #d4e4bc;
+  outline: 4px solid hsl(173 80.2% 23.7%);
 }
 
 .basic > input:disabled:hover {
@@ -35,12 +31,12 @@
 }
 
 .basic > input:checked + span {
-  background-color: #d4e4bc;
-  color: black;
+  background-color: hsl(173 80% 36%);
+  color: hsl(168 48% 6.5%);
 }
 
 @media only screen and (max-width: 720px) {
   .basic {
-    font-size: 0.92rem;
+    font-size: 0.95rem;
   }
 }

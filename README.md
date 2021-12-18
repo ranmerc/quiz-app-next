@@ -1,6 +1,6 @@
 # Quiz App
 
-A NextJS Quiz App based on project idea from [app-ideas](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Quiz-App.md). Deployed on Vercel.
+A NextJS Quiz App based on project idea from [app-ideas](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Quiz-App.md). Deployed on [Github Pages](https://deadmercury.github.io/quiz-app-next/).
 
 ## References
 
@@ -21,3 +21,7 @@ A NextJS Quiz App based on project idea from [app-ideas](https://github.com/flor
 - scroll-margin on [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin)
 
 - [Inclusively Hiding & Styling Checkboxes and Radio Buttons](https://www.sarasoueidan.com/blog/inclusively-hiding-and-styling-checkboxes-and-radio-buttons/)
+
+- [[Support Guide] Netlify app builds locally but fails on deploy (case sensitivity)](https://answers.netlify.com/t/support-guide-netlify-app-builds-locally-but-fails-on-deploy-case-sensitivity/10754s)
+
+- [Radix-UI Colors](https://www.radix-ui.com/docs/colors/)

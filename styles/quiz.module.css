@@ -7,7 +7,7 @@
 .questionList {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  color: #f4e04d;
+  color: var(--teal11);
   font-size: 1.25rem;
   display: grid;
   row-gap: 1rem;
@@ -24,7 +24,7 @@
 .attribute {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  color: #efbcd5;
+  color: var(--teal10);
   font-size: 1.1rem;
   text-align: right;
 }
@@ -76,11 +76,6 @@
   }
 
   .form ::marker {
-    font-size: 0.9rem;
-  }
-
-  .form input[type='reset'],
-  .form input[type='submit'] {
     font-size: 0.9rem;
   }
 
