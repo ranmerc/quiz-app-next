@@ -9,7 +9,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml" />
+        </Head>
         <body>
           <Main />
           <NextScript />
