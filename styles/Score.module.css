@@ -1,37 +1,42 @@
 .container {
   font-family: 'Inter', sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 800;
   color: var(--teal9);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 0.5rem;
+  row-gap: 1rem;
   margin-right: 2rem;
+  align-items: center;
 }
 
 .timeTaken {
+  display: grid;
+  text-align: right;
+}
+
+.score > div,
+.timeTaken > div {
   font-size: 1.4rem;
-  display: flex;
+  color: var(--teal12);
 }
 
 .container > button {
-  justify-self: end;
+  grid-column: 1 / -1;
+  justify-self: center;
 }
 
 @media only screen and (max-width: 720px) {
   .container {
     margin-right: 0rem;
     font-size: 1.4rem;
-    row-gap: 0.2rem;
+    row-gap: 0.5rem;
   }
   .container > button {
-    font-size: 0.75rem;
+    font-size: 0.95rem;
   }
-  .timeTaken {
-    font-size: 1rem;
-    flex-direction: column;
-  }
-  .timeTaken > div {
-    font-size: 0.8rem;
+  .timeTaken > div,
+  .score > div {
+    font-size: 1.1rem;
   }
 }

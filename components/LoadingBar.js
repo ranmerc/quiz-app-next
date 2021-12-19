@@ -49,7 +49,7 @@ export default function LoadingBar() {
           transform: scaleX(${progress});
           transform-origin: left;
           height: 10px;
-          background-color: red;
+          background-color: var(--teal9);
           transition: transform 500ms;
           opacity: ${opacity};
         }
