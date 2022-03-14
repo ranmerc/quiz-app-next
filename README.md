@@ -1,6 +1,6 @@
 # Quiz App
 
-A NextJS Quiz App based on project idea from [app-ideas](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Quiz-App.md). Deployed on [Github Pages](https://deadmercury.github.io/quiz-app-next/).
+A NextJS Quiz App based on project idea from [app-ideas](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Quiz-App.md). Deployed on [Github Pages](https://ranmerc.github.io/quiz-app-next/).
 
 ## References
 
